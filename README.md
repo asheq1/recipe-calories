@@ -1,8 +1,18 @@
-# React + Vite
+# Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Termination
+Simple nav section
+Responsive Topnav
+banner image on text & carousel
+Dark mode
+themealDb api
 
-Currently, two official plugins are available:
+### Middle Stage
+Recipe Details Page
+Search functionality
+Category Filter
+Add to favorites
+User reviews/ rating
+pagination 
+Spinner when api or other load
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
