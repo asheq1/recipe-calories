@@ -18,7 +18,8 @@ export default {
       colors: {
         primary : '#0BE58A',
         hover: '#09B569'
-      }
+      },
+      
     },
   },
   plugins: [],
