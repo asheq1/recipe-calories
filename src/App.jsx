@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <Header />
+      <div className='font-lato'>
+        <Header />
+      </div>
     </>
   )
 }
