@@ -9,22 +9,60 @@ const Banner = () => {
   const slides = [
     {
       className: 'bannerOne',
-      content: <div className=''>
-            <h1 className='text-large text-white'>Welcome to Slide 1</h1>
-            <p className='text-white text-wrap'>Cooking is more than just a daily chore; it’s an opportunity to explore creativity and nurture the soul. Each dish tells a story, reflecting the unique blend of ingredients, techniques, and personal touches that a cook brings to the table.</p>
-            <div className=''>
-                <button className='bg-primary hover:bg-hover text-black text-mid px-5 py-2 font-bold rounded-full'>Explore Now</button>
-                <button className='ml-4 hover:bg-hover text-white border-2 text-mid px-5 py-2 font-bold rounded-full'>Our Feedback</button>
-            </div>
-      </div> , 
+      content: (
+        <div className="flex flex-col items-center justify-center h-full text-center">
+          <h1 className="md:text-4xl font-bold text-white mb-4 drop-shadow-lg">Cooking creativity at its finest! Unlocking delicious possibilities.</h1>
+          <p className="text-white mb-6 px-4 max-w-lg bg-black bg-opacity-50 rounded-md p-3">
+            Cooking is more than just a daily chore; it’s an opportunity to explore creativity and nurture the soul. Each dish tells a story, reflecting the unique blend of ingredients, techniques, and personal touches that a cook brings to the table.
+          </p>
+          <div className="flex space-x-4 btns">
+            <button className="bg-primary hover:bg-hover text-black text-lg px-5 py-2 font-bold rounded-full">
+              Explore Now
+            </button>
+            <button className="hover:bg-hover text-white border-2 text-lg px-5 py-2 font-bold rounded-full">
+              Our Feedback
+            </button>
+          </div>
+    </div>
+      ) 
     },
     {
       className: 'bannerTwo',
-      content: <h1 className='text-white'>Discover More on Slide 2</h1>, // Unique content for slide 2
+      content: (
+        <div className="flex flex-col items-center justify-center h-full text-center">
+          <h1 className="md:text-4xl font-bold text-white mb-4 drop-shadow-lg">Spice up your kitchen adventures. Crafting happiness, <br /> one recipe at a time.</h1>
+          <p className="text-white mb-6 px-4 max-w-lg bg-black bg-opacity-50 rounded-md p-3">
+            Cooking is more than just a daily chore; it’s an opportunity to explore creativity and nurture the soul. Each dish tells a story, reflecting the unique blend of ingredients, techniques
+          </p>
+          <div className="flex space-x-4 btns">
+            <button className="bg-primary hover:bg-hover text-black text-lg px-5 py-2 font-bold rounded-full">
+              Explore Now
+            </button>
+            <button className="hover:bg-hover text-white border-2 text-lg px-5 py-2 font-bold rounded-full">
+              Our Feedback
+            </button>
+          </div>
+    </div>
+      )
     },
     {
       className: 'bannerThree',
-      content: <h1 className='text-white'>Enjoy Slide 3</h1>, // Unique content for slide 3
+      content: (
+        <div className="flex flex-col items-center justify-center h-full text-center">
+          <h1 className="md:text-4xl font-bold text-white mb-4 drop-shadow-lg">Bringing families together through food. Elevate your <br /> cooking game effortlessly.</h1>
+          <p className="text-white mb-6 px-4 max-w-lg bg-black bg-opacity-50 rounded-md p-3">
+            Cooking is more than just a daily chore; it’s an opportunity to explore creativity and nurture the soul. Each dish tells a story.
+          </p>
+          <div className="flex space-x-4 btns">
+            <button className="bg-primary hover:bg-hover text-black text-lg px-5 py-2 font-bold rounded-full">
+              Explore Now
+            </button>
+            <button className="hover:bg-hover text-white border-2 text-lg px-5 py-2 font-bold rounded-full">
+              Our Feedback
+            </button>
+          </div>
+    </div>
+      )
     },
   ];
 
@@ -36,9 +74,9 @@ const Banner = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
-    // Automatically change slide every 3 seconds
+    // Automatically change slide every 4 seconds
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000); 
+    const interval = setInterval(nextSlide, 4000); 
     return () => clearInterval(interval); 
   }, []);
 

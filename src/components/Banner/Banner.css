@@ -1,28 +1,37 @@
-.bannerOne {
-  background-image: url('../../assets/bannerOne.jpg');
+.bannerOne,.bannerTwo,.bannerThree{
   background-size: cover;
   background-position: center;
   height: 650px;
   position: relative;
   border-radius: 20px;
+  z-index: 10;
+}
+
+@media (max-width: 600px){
+  .bannerOne,.bannerTwo,.bannerThree{
+    height: 300px;
+  }
+  .content{
+
+  }
+  .btns{
+    
+  }
+}
+
+.bannerOne {
+  background-image: url('../../assets/bannerOne.jpg');
+  
 }
 
 .bannerTwo {
   background-image: url('../../assets/bannerTwo.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 650px;
-  position: relative;
-  border-radius: 20px;
+
 }
 
 .bannerThree {
   background-image: url('../../assets/bannerThree.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 650px;
-  position: relative;
-  border-radius: 20px;
+
 }
 
 /* Navigation Buttons */
@@ -52,3 +61,14 @@
 .next-slide:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.content {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  height: 100%;            
+  color: white;        
+  text-align: center;     
+  flex-direction: column;   
+}
+
