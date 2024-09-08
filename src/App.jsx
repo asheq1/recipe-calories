@@ -1,6 +1,8 @@
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
+import Recipies from './components/Recipies/Recipies'
+
 
 function App() {
 
@@ -9,6 +11,7 @@ function App() {
       <div className='font-lato'>
         <Header />
         <Banner />
+        <Recipies />
       </div>
     </>
   )

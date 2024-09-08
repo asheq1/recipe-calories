@@ -1,0 +1,151 @@
+[
+    {
+      "id": 1,
+      "mealName": "Spaghetti Bolognese",
+      "category": "Pasta",
+      "calories": 400,
+      "cooking": 25,
+      "ingredients": [
+        "Spaghetti",
+        "Ground beef",
+        "Onion",
+        "Garlic",
+        "Tomato sauce",
+        "Olive oil",
+        "Salt",
+        "Pepper"
+      ],
+      "instructions": "Cook the spaghetti according to package instructions. In a separate pan, heat olive oil and sauté onions and garlic until soft. Add ground beef and cook until browned. Stir in tomato sauce, season with salt and pepper, and let simmer for 20 minutes. Serve the sauce over the spaghetti.",
+      "mealImage": "../src/assets/spaghetti-bolognese-.jpg",
+      "area": "Italian"
+    },
+    {
+      "id": 2,
+      "mealName": "Chicken Curry",
+      "category": "Curry",
+      "calories": 600,
+      "cooking": 35,
+      "ingredients": [
+        "Chicken breast",
+        "Onion",
+        "Garlic",
+        "Ginger",
+        "Coconut milk",
+        "Curry powder",
+        "Turmeric",
+        "Chili powder",
+        "Coriander",
+        "Salt"
+      ],
+      "instructions": "Heat oil in a pot, sauté onions, garlic, and ginger until fragrant. Add the chicken and cook until browned. Stir in curry powder, turmeric, chili powder, and coriander. Add coconut milk and simmer for 30 minutes until the chicken is fully cooked. Serve with rice.",
+      "mealImage": "../src/assets/Andhra-Chicken-Curry-2-3.jpg",
+      "area": "Indian"
+    },
+    {
+      "id": 3,
+      "mealName": "Sushi",
+      "category": "Seafood",
+      "calories": 500,
+      "cooking": 20,
+      "ingredients": [
+        "Sushi rice",
+        "Nori sheets",
+        "Fresh fish (salmon, tuna)",
+        "Cucumber",
+        "Avocado",
+        "Soy sauce",
+        "Wasabi",
+        "Pickled ginger"
+      ],
+      "instructions": "Cook the sushi rice and let it cool. Place a nori sheet on a bamboo mat, spread rice evenly, and add fish, cucumber, and avocado. Roll tightly and slice into bite-sized pieces. Serve with soy sauce, wasabi, and pickled ginger.",
+      "mealImage": "../src/assets/handmade-sushi-rolls.jpg",
+      "area": "Japanese"
+    },
+    {
+      "id": 4,
+      "mealName": "Tacos",
+      "category": "Mexican",
+      "calories": 450,
+      "cooking": 35,
+      "ingredients": [
+        "Taco shells",
+        "Ground beef",
+        "Lettuce",
+        "Tomato",
+        "Cheese",
+        "Sour cream",
+        "Salsa",
+        "Avocado"
+      ],
+      "instructions": "Cook the ground beef in a pan, seasoning with salt and pepper. Assemble the tacos by placing the beef in taco shells and adding lettuce, tomato, cheese, sour cream, salsa, and avocado on top.",
+      "mealImage": "../src/assets/Ground-Beef-Tacos-TIMG.jpg",
+      "area": "Mexican"
+    },
+    {
+      "id": 5,
+      "mealName": "Pad Thai",
+      "category": "Noodles",
+      "calories": 300,
+      "cooking": 20,
+      "ingredients": [
+        "Rice noodles",
+        "Shrimp",
+        "Eggs",
+        "Bean sprouts",
+        "Peanuts",
+        "Green onions",
+        "Garlic",
+        "Fish sauce",
+        "Lime",
+        "Chili powder"
+      ],
+      "instructions": "Soak rice noodles in water. Stir-fry garlic and shrimp in a pan. Push shrimp to the side and scramble the eggs. Add noodles, bean sprouts, fish sauce, and chili powder. Toss together and serve with chopped peanuts, green onions, and lime.",
+      "mealImage": "../src/assets/PADTHAI.jpg",
+      "area": "Thai"
+    },
+    {
+      "id": 6,
+      "mealName": "Beef Stroganoff",
+      "category": "Meat",
+      "calories": 650,
+      "cooking": 120,
+      "ingredients": [
+        "Beef strips",
+        "Onions",
+        "Mushrooms",
+        "Sour cream",
+        "Butter",
+        "Garlic",
+        "Flour",
+        "Beef broth",
+        "Salt",
+        "Pepper"
+      ],
+      "instructions": "Sauté onions and garlic in butter. Add beef strips and cook until browned. Stir in mushrooms and cook for 5 minutes. Add flour, beef broth, and sour cream, and simmer until thickened. Serve with rice or pasta.",
+      "mealImage": "../src/assets/stroganoff-.jpg",
+      "area": "Russian"
+    },
+    {
+      "id": 7,
+      "mealName": "Falafel",
+      "category": "Vegan",
+      "calories": 500,
+      "cooking": 45,
+      "ingredients": [
+        "Chickpeas",
+        "Garlic",
+        "Onions",
+        "Cilantro",
+        "Parsley",
+        "Cumin",
+        "Coriander",
+        "Flour",
+        "Salt",
+        "Pepper"
+      ],
+      "instructions": "Blend chickpeas, garlic, onions, cilantro, parsley, cumin, and coriander in a food processor. Form into small balls and fry until golden brown. Serve in pita bread with salad and tahini sauce.",
+      "mealImage": "../src/assets/TOA.webp",
+      "area": "Middle Eastern"
+    }
+  ]
+  

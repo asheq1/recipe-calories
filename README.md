@@ -3,7 +3,7 @@
 ### Termination
 Simple nav section
 Responsive Topnav
-banner image on text & carousel
+banner image on text & carousel. fault(indicate, cursor, animate)
 Dark mode
 themealDb api
 
