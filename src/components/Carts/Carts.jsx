@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cart from '../Cart/Cart';
+import PropTypes from 'prop-types';
 
 const Carts = ({cookings}) => {
     const [preparingMeals, setPreparingMeals] = useState([]);
@@ -13,7 +14,7 @@ const Carts = ({cookings}) => {
         if(!isPreparing){
             setPreparingMeals([...preparingMeals, meal])
         } else{
-            toast.error(`${meal} is already in the cart`)
+            toast.error(`${meal.mealName} is already in the cart`)
         }
 
     }
@@ -61,5 +62,9 @@ const Carts = ({cookings}) => {
     </div>
     );
 };
+
+Carts.propTypes = {
+    cookings: PropTypes.object.isRequired
+}
 
 export default Carts;
