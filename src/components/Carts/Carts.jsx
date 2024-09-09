@@ -1,5 +1,23 @@
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Cart from '../Cart/Cart';
+
 const Carts = ({cookings}) => {
+    const [preparingMeals, setPreparingMeals] = useState([]);
+
     console.log(cookings)
+    
+    const handelPreparing = (meal) => {
+        const isPreparing = preparingMeals.some(item => item.id === meal.id)
+        if(!isPreparing){
+            setPreparingMeals([...preparingMeals, meal])
+        } else{
+            toast.error(`${meal} is already in the cart`)
+        }
+
+    }
+
     return (
     <div className="card bg-base-100 shadow-xl ">
         <div className="card-body">
@@ -26,7 +44,9 @@ const Carts = ({cookings}) => {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.cooking} minutes</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.calories} calories</td>
                                 <td>
-                                <button className="btn bg-primary hover:bg-hover text-black text-lg px-5 py-2 font-bold rounded-full">Preparing</button>
+                                <button 
+                                    onClick={()=>handelPreparing(item)}
+                                    className="btn bg-primary hover:bg-hover text-black text-lg px-5 py-2 font-bold rounded-full">Preparing</button>
                                 </td>
                             </tr>
                         ))}
@@ -36,8 +56,9 @@ const Carts = ({cookings}) => {
             )}
 
         </div>
-</div>
-
+        <Cart preparingMeals={preparingMeals} />
+        <ToastContainer />
+    </div>
     );
 };
 

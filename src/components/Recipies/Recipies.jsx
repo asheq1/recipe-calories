@@ -43,7 +43,9 @@ const Recipies = () => {
                 <div className="hidden sm:block ">
                     <Carts
                        cookings={cookings}
+                       
                     />
+
                 </div>
             </div>
             {/* toast container display  */}
