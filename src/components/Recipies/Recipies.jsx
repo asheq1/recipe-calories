@@ -1,41 +1,53 @@
 import { useEffect, useState } from "react";
 import Recipie from "../Recipie/Recipie";
+import Carts from "../Carts/Carts";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipies = () => {
     const [recipies, setRecipies] = useState([]);
+    const [cookings, setCookings] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('recipies.json')
-        .then(res => res.json())
-        .then(data => setRecipies(data))
-    }, [])
+            .then(res => res.json())
+            .then(data => setRecipies(data));
+    }, []);
+
+    const handleCooking = (cook) => {
+        const isAlreadyInCart = cookings.some((recipe) => recipe.id === cook.id);
+        if (!isAlreadyInCart) {
+            setCookings([...cookings, cook]);
+            // toast.success(`${cook.mealName} is added`)
+        } else {
+            toast.error(`${cook.mealName} is already in the cart`)
+        }
+    };
 
     return (
-        <div className="ml-12 ">
-            <h1 className="text-large text-center font-bold mt-5">Our Recipies</h1>
-            
-            <div className="flex  justify-evenly gap-5 mt-5">
+        <div className="ml-12">
+            <h1 className="text-large text-center font-bold mt-5">Our Recipes</h1>
+
+            <div className="flex justify-evenly gap-5 mt-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 mt-5">
                     {
                         recipies.map((recipie) => <Recipie
                             key={recipie.id}
                             recipie={recipie}
-                        ></Recipie>)
+                            handleCooking={handleCooking}
+                        />)
                     }
                 </div>
-                {/* cart when small device hidden*/}
-                <div className="hidden sm:block">
-                    <div className="card bg-base-100 w-96 shadow-xl">
-                        <div className="card-body">
-                            <h2 className="card-title">Card title!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
+
+                {/* Cart - Hidden on small devices */}
+                <div className="hidden sm:block ">
+                    <Carts
+                       cookings={cookings}
+                    />
                 </div>
             </div>
+            {/* toast container display  */}
+            <ToastContainer />
         </div>
     );
 };
